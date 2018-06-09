@@ -56,16 +56,6 @@
 
       window.addEventListener('load', function() {
         initApp()
-
-          FB.api(
-          '/minglanillaflashreport',
-          'GET',
-          {"fields":"posts"},
-          function(response) {
-              console.log(response);
-          }
-        );
-
       });
     </script>
   </head>
@@ -88,6 +78,17 @@
        js.src = "//connect.facebook.net/pl_PL/all.js";
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
+
+
+    FB.api(
+          '/minglanillaflashreport',
+          'GET',
+          {"fields":"posts"},
+          function(response) {
+              console.log(response);
+          }
+    );
+
     </script>
 
     <h1>Welcome to My Awesome App</h1>
