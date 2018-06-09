@@ -57,14 +57,14 @@
       window.addEventListener('load', function() {
         initApp()
 
-        //   FB.api(
-        //   '/minglanillaflashreport',
-        //   'GET',
-        //   {"fields":"posts"},
-        //   function(response) {
-        //       // Insert your code here
-        //   }
-        // );
+          FB.api(
+          '/minglanillaflashreport',
+          'GET',
+          {"fields":"posts"},
+          function(response) {
+              console.log(response);
+          }
+        );
 
       });
     </script>
