@@ -30,18 +30,18 @@
             var phoneNumber = user.phoneNumber;
             var providerData = user.providerData;
             user.getIdToken().then(function(accessToken) {
-              document.getElementById('sign-in-status').textContent = 'Signed in';
-              document.getElementById('sign-in').textContent = 'Sign out';
-              document.getElementById('account-details').textContent = JSON.stringify({
-                displayName: displayName,
-                email: email,
-                emailVerified: emailVerified,
-                phoneNumber: phoneNumber,
-                photoURL: photoURL,
-                uid: uid,
-                accessToken: accessToken,
-                providerData: providerData
-              }, null, '  ');
+              //document.getElementById('sign-in-status').textContent = 'Signed in';
+              //document.getElementById('sign-in').textContent = 'Sign out';
+              // document.getElementById('account-details').textContent = JSON.stringify({
+              //   displayName: displayName,
+              //   email: email,
+              //   emailVerified: emailVerified,
+              //   phoneNumber: phoneNumber,
+              //   photoURL: photoURL,
+              //   uid: uid,
+              //   accessToken: accessToken,
+              //   providerData: providerData
+              // }, null, '  ');
             });
           } else {
             // User is signed out.
@@ -95,7 +95,7 @@
     <div id="sign-in"></div>
     <div id="account-details"></div>
 
-    <div class="fb-page" data-href="https://www.facebook.com/minglanillaflashreport/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/minglanillaflashreport/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/minglanillaflashreport/">Minglanilla Flash Report</a></blockquote></div>
+  <div class="fb-page" data-href="https://www.facebook.com/minglanillaflashreport/" data-tabs="timeline" data-width="500" data-height="800" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/minglanillaflashreport/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/minglanillaflashreport/">Minglanilla Flash Report</a></blockquote></div>
   </body>
 
 </html>
