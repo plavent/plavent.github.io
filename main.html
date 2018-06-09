@@ -75,7 +75,12 @@
             {"fields":"posts.limit(5)"},
             function(response) {
                 console.log(response);
-            }, {access_token: token});
+            }, {access_token: token}).then(function()
+              { 
+                console.log(response);
+                console.log(response.data);
+                console.log(response.data[0]);
+              });
 
     };
 
