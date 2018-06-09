@@ -72,7 +72,7 @@
       var token = 'EAACEdEose0cBAFhufrdWrIcpR561GJFnetVscr4axS9ZBTZAeNHpigeX1IM3OC5PHXBxkHjXNM2lYxJ1LM5oNIZARz0xv7I9JLiEQZAZCvXpL1SBYWXC32CnSPH9vKAwZCti9XgUpgX0qwFlOPIPQzZBbwVjRAuwlZA69FBZC53cN6ZAVPkctIEZAykFbqX90iU078Ba9FCq9ZC6QwZDZD';
       FB.api('/minglanillaflashreport',
             'GET',
-            {"fields":"posts"},
+            {"fields":"posts.limit(5)"},
             function(response) {
                 console.log(response);
             }, {access_token: token});
