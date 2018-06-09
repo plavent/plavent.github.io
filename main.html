@@ -17,26 +17,6 @@
       firebase.initializeApp(config);
     </script>
 
-    <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId            : '251135298797312',
-        autoLogAppEvents : true,
-        xfbml            : true,
-        version          : 'v3.0'
-      });
-    };
-
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement(s); js.id = id;
-       js.src = "https://connect.facebook.net/en_US/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-
     <script type="text/javascript">
       initApp = function() {
         firebase.auth().onAuthStateChanged(function(user) {
@@ -90,9 +70,30 @@
     </script>
   </head>
   <body>
+    
+    <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : '209921852957913',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v3.0'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <h1>Welcome to My Awesome App</h1>
     <div id="sign-in-status"></div>
     <div id="sign-in"></div>
     <div id="account-details"></div>
   </body>
+
 </html>
