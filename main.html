@@ -64,20 +64,18 @@
     window.fbAsyncInit = function() {
       FB.init({
         appId            : '251135298797312',
-        secret           : '95146e67adb57a763bf12f1fe8048fa4',
         autoLogAppEvents : true,
         xfbml            : true,
         version          : 'v3.0'
       });
 
-      FB.api(
-            '/minglanillaflashreport',
+      var token = 'EAACEdEose0cBAFhufrdWrIcpR561GJFnetVscr4axS9ZBTZAeNHpigeX1IM3OC5PHXBxkHjXNM2lYxJ1LM5oNIZARz0xv7I9JLiEQZAZCvXpL1SBYWXC32CnSPH9vKAwZCti9XgUpgX0qwFlOPIPQzZBbwVjRAuwlZA69FBZC53cN6ZAVPkctIEZAykFbqX90iU078Ba9FCq9ZC6QwZDZD';
+      FB.api('/minglanillaflashreport',
             'GET',
             {"fields":"posts"},
             function(response) {
                 console.log(response);
-            }
-      );
+            }, {access_token: token});
 
     };
 
