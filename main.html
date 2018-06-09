@@ -45,9 +45,9 @@
             });
           } else {
             // User is signed out.
-            document.getElementById('sign-in-status').textContent = 'Signed out';
-            document.getElementById('sign-in').textContent = 'Sign in';
-            document.getElementById('account-details').textContent = 'null';
+            //document.getElementById('sign-in-status').textContent = 'Signed out';
+            //document.getElementById('sign-in').textContent = 'Sign in';
+            //document.getElementById('account-details').textContent = 'null';
           }
         }, function(error) {
           console.log(error);
@@ -69,13 +69,13 @@
         version          : 'v3.0'
       });
 
-      var token = 'EAACEdEose0cBAPSZBpBZAD3shsbADsmzpiaZCcIwVP2guccUy3X0kryQKiiIXePboGZBtx8uAbhcJH9LVhaSDufJoejnfxWp2LbZAiAHf39Cysdpf2BicDKNFGVWkoNRmbnnBYIouFfzqHeCCDdmtDEfhWmFLtNgVlU3XQJbfrmo1Fme0OYNx337x0VCuxDzBp4iEyZCdLtnr6hlAl78GA';
-      FB.api('/minglanillaflashreport/feed?fields=attachments',//minglanillaflashreport?fields=feed{created_time,attachments,message}
-            'GET',
-            {},
-            function(response) {
-                console.log(response);
-            }, {access_token: token})
+      // var token = 'EAACEdEose0cBAPSZBpBZAD3shsbADsmzpiaZCcIwVP2guccUy3X0kryQKiiIXePboGZBtx8uAbhcJH9LVhaSDufJoejnfxWp2LbZAiAHf39Cysdpf2BicDKNFGVWkoNRmbnnBYIouFfzqHeCCDdmtDEfhWmFLtNgVlU3XQJbfrmo1Fme0OYNx337x0VCuxDzBp4iEyZCdLtnr6hlAl78GA';
+      // FB.api('/minglanillaflashreport/feed?fields=attachments',//minglanillaflashreport?fields=feed{created_time,attachments,message}
+      //       'GET',
+      //       {},
+      //       function(response) {
+      //           console.log(response);
+      //       }, {access_token: token})
 
     };
 
@@ -83,7 +83,7 @@
        var js, fjs = d.getElementsByTagName(s)[0];
        if (d.getElementById(id)) {return;}
        js = d.createElement(s); js.id = id;
-       js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=251135298797312&autoLogAppEvents=1";//'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=251135298797312&autoLogAppEvents=1'; //connect.facebook.net/pl_PL/all.js
+       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=251135298797312&autoLogAppEvents=1";//'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=251135298797312&autoLogAppEvents=1'; //connect.facebook.net/pl_PL/all.js
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
     </script>
