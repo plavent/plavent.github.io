@@ -58,6 +58,21 @@
         initApp()
       });
     </script>
+
+      <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
   </head>
   <body>
     <script>
@@ -100,7 +115,23 @@
 
   <div class="fb-page" data-href="https://www.facebook.com/cebuflashreport/" data-tabs="timeline" data-width="500" data-height="800" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/cebuflashreport/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/cebuflashreport/">Cebu Flash Report</a></blockquote></div>
 
-  
+
+  <div id="map"></div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat: 34.04924594193164, lng: -118.24104309082031}
+        });
+
+        var trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOEqlrfaAiInY3fJqj1_uK8x7kS7M10us&callback=initMap">
+    </script>
+
   </body>
 
 
